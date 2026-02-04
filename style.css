@@ -139,11 +139,7 @@ body {
   .hero-text h2 { font-size: 1.2rem; }
 }
 
-@media (max-width: 600px) {
-  .profile-img { width: 140px; height: 140px; }
-  .hero-text h1 { font-size: 2rem; }
-  .hero-text h2 { font-size: 1rem; }
-}
+
 
 
 
@@ -340,9 +336,10 @@ section, header, footer {
   }
 }
 
-/* Mobile ≤ 600px */
-/* Mobile menu slide from left */
+/* MOBILE ≤600px */
 @media (max-width: 600px) {
+
+  /* Hamburger menu */
   .hamburger {
     display: block;
   }
@@ -352,18 +349,18 @@ section, header, footer {
     top: 0;
     left: 0;
     height: 100vh;
-    width: 250px; /* menu width */
+    width: 250px; 
     background: #fff;
     flex-direction: column;
     gap: 1rem;
-    padding-top: 4rem; /* spacing from top */
-    transform: translateX(-100%); /* hide off-screen left */
+    padding-top: 4rem;
+    transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
     z-index: 999;
   }
 
   .nav-links.active {
-    transform: translateX(0); /* slide in */
+    transform: translateX(0);
   }
 
   .nav-links li {
@@ -376,7 +373,6 @@ section, header, footer {
     justify-content: space-between;
   }
 
-  /* Optional: overlay when menu is open */
   .nav-links::after {
     content: '';
     position: fixed;
@@ -391,7 +387,49 @@ section, header, footer {
   .nav-links.active::after {
     display: block;
   }
+
+  /* PROJECTS: single column */
+  .projects-grid {
+    grid-template-columns: 1fr; /* one column */
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    padding: 1rem; /* optional */
+  }
+
+  .project-thumb {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+  /* Other mobile adjustments */
+  .profile-img { width: 140px; height: 140px; }
+  .hero-text h1 { font-size: 2rem; }
+  .hero-text h2 { font-size: 1rem; }
+
+  .experience-logos {
+    gap: 1rem;
+  }
+  .logo-item {
+    flex: 1 1 100px;
+    max-width: 100px;
+  }
+
+  .job {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .company-logo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.5rem;
+  }
 }
+
 
 
 /* WORK EXPERIENCE */
@@ -435,15 +473,7 @@ section, header, footer {
 }
 
 /* Mobile responsiveness */
-@media (max-width: 600px) {
-  .experience-logos {
-    gap: 1rem;
-  }
-  .logo-item {
-    flex: 1 1 100px;
-    max-width: 100px;
-  }
-}
+
 
 /* WORK EXPERIENCE - JOB CARDS */
 .job {
@@ -493,19 +523,7 @@ section, header, footer {
   color: #333;
 }
 
-/* Mobile responsiveness */
-@media (max-width: 600px) {
-  .job {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 
-  .company-logo {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 0.5rem;
-  }
-}
 
 
 .tech-stack {
